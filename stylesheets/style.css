@@ -1,0 +1,219 @@
+/*全局样式*/
+*{
+	margin:0;
+	padding:0;
+	font-family:微软雅黑;
+	overflow:hidden;
+}
+body{background-image:url(images/bg.gif);}
+a{text-decoration:none;}
+li{list-style-type:none;}
+h1,h2{
+	color:#fff;
+	font-weight:normal;
+	font-size:1.2em;
+	text-align:center;
+}
+/*公用样式*/
+.content-title{
+	line-height: 2em;
+	height: 2em;
+}
+#basic .content-title,#basic .back-btn{background-color:#0e8dfc;}
+#exp .content-title,#exp .back-btn{background-color:#760be2;}
+#interest .content-title,#interest .back-btn{background-color:#77A315;}
+
+/*标题页*/
+.title:nth-child(1){background-color:#FF9999;}
+.title:nth-child(2),#basic{background-color:#87c3f7;}
+.title:nth-child(3),#exp{background-color:#b487e0;}
+.title:nth-child(4),#interest{background-color:#b7d17e;}
+#index h1,#index h2{
+	position: relative;
+	top:50%;
+	margin-top:-.6em;
+}
+.fade-in-left{
+	-webkit-animation:fadeInLeft 1.5s ease 0s 1;
+	animation:fadeInLeft 1.5s ease 0s 1;
+}
+.fade-in-right{
+	-webkit-animation:fadeInRight 1.5s ease 0s 1;
+	animation:fadeInRight 1.5s ease 0s 1;
+}
+
+/*基本信息页*/
+.photo{
+	border:2px solid #fff;
+	position: relative;
+	left:50%;
+}
+.basic-list{color:#fff;}
+.basic-list li:first-child{
+	height:auto;
+	border:none;
+}
+.basic-list span{
+	color:#FFF78B;
+	padding:0 .5em;
+}
+/*项目经历页*/
+.exp-list{
+	width:80%;
+	margin:1em auto;
+}
+.code-title{color:#21439D;}
+.code-en{color:#9B2E4D;}
+.code-ch{color:#745A00;}
+/*兴趣领域*/
+.interest-list{
+	width:80%;
+	margin:1em auto;
+}
+.interest-point{color:#C91F1F;}
+.interest-head{
+	color:#00f;
+	font-size:1.2em;
+}
+/*针对pc的样式*/
+@media screen and (min-width:1025px){
+	.mb-visible{display:none;}/*只在移动设备显示*/
+	.sc-visible{display:block;}/*只在pc显示*/
+	.full-screen{
+		width:50%;
+		margin-left:25%; 
+		position: absolute;
+	}
+	.hide{top:100%;}
+	.show{top:0;}
+	.top-out{
+		-webkit-animation:topOut 1s linear 0s 1;
+		animation:topOut 1s linear 0s 1; 
+		top:-100%;
+	}
+	.bottom-in{
+		-webkit-animation:bottomIn 1s linear 0s 1;
+		animation:bottomIn 1s linear 0s 1;
+		top:0;
+	}
+	.top-in{
+		-webkit-animation:topIn 1s linear 0s 1;
+		animation:topIn 1s linear 0s 1; 
+		top:0;
+	}
+	.bottom-out{
+		-webkit-animation:bottomOut 1s linear 0s 1;
+		animation:bottomOut 1s linear 0s 1;
+		top:100%;
+	}
+	.back-btn{
+		color:#fff;
+		position: relative;
+		left:50%;
+		margin-top:1em;
+		margin-left:-2.8em;
+		padding:.5em .8em;
+		border:none;
+		border-radius:4px;
+	}
+	/*标题页*/
+	.title{
+		width:50%;
+		height:50%;
+		float:left;
+	}
+	.title:hover h2{
+		-webkit-animation:scale .5s ease-in-out 0s 2 alternate;
+		animation:scale .5s ease-in-out 0s 2 alternate;
+	}
+}
+/*针对较大屏幕的样式*/
+@media screen and (min-width:720px){
+	/*基本信息页*/
+	.photo{
+		width:100px;
+		border-radius:54px;
+		border:4px solid #fff;
+		margin:1em;
+		margin-left:-54px; 
+	}
+	.basic-list li{
+		width:50%;
+		line-height:1.8em;
+		height:1.8em;
+		margin:.5em auto;
+		border-radius:4px;
+		border:2px solid #fff;
+	}
+	/*项目经历页*/
+	.exp-list dl,.exp-list dd,.code-title{
+		line-height:2em;
+	}
+	/*兴趣领域页*/
+	.interest-list li{line-height:2em;}
+}
+/*针对较小屏幕的样式*/
+@media screen and (max-width:719px){
+	/*基本信息页*/
+	.photo{
+		width:60px;
+		border-radius:32px;
+		border:2px solid #fff;
+		margin:.5em;
+		margin-left:-32px; 
+
+	}
+	.basic-list li{
+		width:80%;
+		line-height:1.3em;
+		height:1.3em;
+		margin:.4em auto;
+		border-radius:3px;
+		border:1px solid #fff;
+	}
+	/*项目经历页*/
+	.code-title{
+		height:1.4em;
+		line-height:1.4em;
+	}
+	/*兴趣领域页*/
+	.interest-list li{line-height:1.5em;}
+}
+/*针对移动设备的样式*/
+@media screen and (max-width:1024px){
+	.mb-visible{display:block;}/*只在移动设备显示*/
+	.sc-visible{display:none;}/*只在pc显示*/
+	.hide,.top-out{display:none;}/*有些手机不支持隐藏竖直滚动条，不能用top来控制位置*/
+	.show,.bottom-in{display:block;}
+	/*标题页*/
+	.full-screen{width:100%;}
+	.title{
+		width:100%;
+		height:25%;
+	}	
+	/*底部菜单*/
+	#footer{
+		width: 100%;
+		position: fixed;
+		bottom:0;
+		left:0;
+		height:2.5em;
+		text-align:center;
+		display:none;
+	}
+	#footer a{
+		display:block;
+		color:#fff;
+		font-size:.5em;
+	}
+	#footer li{
+		float: left;
+		width:25%;
+		margin:0.2em 0;
+	}
+	#footer img{
+		width:1.4em;
+		display:block;
+		margin:0 auto;
+	}
+}
