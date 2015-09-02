@@ -197,7 +197,14 @@ h1,h2{
 	.title{
 		width:100%;
 		height:25%;
-	}	
+	}
+	/*顶部标题*/
+	.content-title{
+		position:fixed;
+		width:100%;
+		z-index:999; /* 主要是因为照片是相对定位的 */
+	}
+	.basic-list,.exp-list,.interest-list{padding:2.4em 0;} /* 给上下留出间隙 */
 	/*底部菜单*/
 	#footer{
 		width: 100%;
