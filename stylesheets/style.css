@@ -190,7 +190,10 @@ h1,h2{
 	.hide,.top-out{display:none;}/*有些手机不支持隐藏竖直滚动条，不能用top来控制位置*/
 	.show,.bottom-in{display:block;}
 	/*标题页*/
-	.full-screen{width:100%;}
+	.full-screen{
+		width:100%;
+		overflow-y:auto;
+	}
 	.title{
 		width:100%;
 		height:25%;
