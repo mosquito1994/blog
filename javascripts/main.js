@@ -115,7 +115,7 @@
 	// 开始项目经历板块打字机效果
 	function beginTypeWritter(contentId) {
 		if(beginWrite == 0 && contentId == "exp") {
-			document.querySelector(".exp-list").typeWritter(100);
+			document.querySelector(".exp-list").typeWritter(80);
 			beginWrite = 1;
 		}
 	}
