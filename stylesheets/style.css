@@ -85,6 +85,7 @@ h1,h2{
 	.sc-visible{display:block;}/*只在pc显示*/
 	.full-screen{
 		width:50%;
+		height:100%;
 		margin-left:25%; 
 		position: absolute;
 	}
